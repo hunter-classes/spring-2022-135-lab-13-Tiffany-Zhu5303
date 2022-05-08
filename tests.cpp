@@ -14,3 +14,27 @@ TEST_CASE("summing range"){
   CHECK(sumRange(-33, 53) == 870);
   CHECK(sumRange(0, 0) == 0);
 }
+
+TEST_CASE("summing elements of array"){
+  int size = 5;
+  int *arr = new int[size];
+
+  arr[0] = 12;
+  arr[1] = 17;
+  arr[2] = -5;
+  arr[3] = 3;
+  arr[4] = 7;
+
+  CHECK(sumArray(arr, size) == 34);
+  delete[] arr;
+
+  size = 4;
+  arr = new int[size];
+
+  arr[0] = -12;
+  arr[1] = 13;
+  arr[2] = 4;
+  arr[3] = 18;
+
+  CHECK(sumArray(arr, size) == 23);
+}
