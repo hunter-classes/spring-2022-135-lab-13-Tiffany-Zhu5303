@@ -37,4 +37,6 @@ TEST_CASE("summing elements of array"){
   arr[3] = 18;
 
   CHECK(sumArray(arr, size) == 23);
+  delete[] arr;
+  arr = nullptr;
 }

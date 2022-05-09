@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <ctype.h>
+#include <stdio.h>
 
 #include "recursion.h"
 
@@ -29,3 +31,18 @@ int sumArray(int *arr, int size){
     return sum;
   }
 }
+
+bool isAlphanumeric(std::string s){
+  if(s.length() > 1){
+    if(std::isalnum(s[0])){
+      return isAlphanumeric(s.substr(1, s.length() - 1));
+    }
+  }else if(s.length() == 1){
+    if(std::isalnum(s[0])){
+      return true;
+    }
+  }else{
+    return false;
+  }
+}
+    

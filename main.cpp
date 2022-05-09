@@ -47,6 +47,19 @@ int main(){
   std::cout << "} is:\n" << sum1 << std::endl;
 
   delete[] arr;
+  arr = nullptr;
+
+  std::cout << "\n--------Task D----------" << std::endl;
+  std::string stringT = "Hello084u";
+  std::string stringF = "It's 2:30pm";
+
+  std::cout << "For the strings below, they are 1 if they consist of only alphanumerics and 0\notherwise\n" << std::endl;
+
+  std::cout << stringT << ": " << std::endl;
+  std::cout << isAlphanumeric(stringT) << std::endl;
+
+  std::cout << "\n" << stringF << ": " << std::endl;
+  std::cout << isAlphanumeric(stringF) << std::endl;
 
   return 0;
 }
