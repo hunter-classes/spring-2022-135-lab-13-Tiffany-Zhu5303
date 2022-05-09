@@ -61,5 +61,21 @@ int main(){
   std::cout << "\n" << stringF << ": " << std::endl;
   std::cout << isAlphanumeric(stringF) << std::endl;
 
+  std::cout << "\n--------Task E----------" << std::endl;
+  std::cout << "For the strings below, they are 1 if they consist of parenthesis and 0\notherwise\n" << std::endl;
+
+  std::string triple = "((()))";
+  std::string false_double = "())";
+  std::string empty = "";
+
+  std::cout << triple << ": " << std::endl;
+  std::cout << nestedParens(triple) << std::endl;
+
+  std::cout << "\n" << false_double << ": " << std::endl;
+  std::cout << nestedParens(false_double) << std::endl;
+
+  std::cout << "\nempty string: " << std:: endl;
+  std::cout << nestedParens(empty) << std::endl;
+  
   return 0;
 }

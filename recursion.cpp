@@ -9,7 +9,6 @@ std::string printRange(int left, int right){
   if(left <= right){
     return std::to_string(left) + " " + printRange(left + 1, right);
   }
-
   return "";
 }
 
@@ -53,6 +52,16 @@ bool isAlphanumeric(std::string s){
     
     return false;
     
+  }
+}
+
+bool nestedParens(std::string s){
+  if(s == ""){
+    return true;
+  }else if(s[0] == '(' && s[s.length() - 1] == ')'){
+    return nestedParens(s.substr(1, s.length() - 2));
+  }else{
+    return false;
   }
 }
     
