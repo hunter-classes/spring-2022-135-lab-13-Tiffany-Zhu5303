@@ -40,3 +40,15 @@ TEST_CASE("summing elements of array"){
   delete[] arr;
   arr = nullptr;
 }
+
+TEST_CASE("alphanumerics only"){
+  std::string alpha = "lalalalala";
+  std::string space = "lalala lalala";
+  std::string symbol = "wow!";
+  std::string cases = "BoopDoop";
+
+  CHECK(isAlphanumeric(alpha) == 1);
+  CHECK(isAlphanumeric(space) == 0);
+  CHECK(isAlphanumeric(symbol) == 0);
+  CHECK(isAlphanumeric(cases) == 1);
+}
