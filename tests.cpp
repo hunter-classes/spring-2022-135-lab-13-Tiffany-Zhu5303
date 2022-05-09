@@ -52,3 +52,17 @@ TEST_CASE("alphanumerics only"){
   CHECK(isAlphanumeric(symbol) == 0);
   CHECK(isAlphanumeric(cases) == 1);
 }
+
+TEST_CASE("nested parenthesis"){
+  std::string letters = "abc";
+  std::string letters_paren = "a(b)c";
+  std::string numbers = "123";
+  std::string parenx5 = "((((()))))";
+  std::string unnested = "()()()";
+
+  CHECK(nestedParens(letters) == 0);
+  CHECK(nestedParens(letters_paren) == 0);
+  CHECK(nestedParens(numbers) == 0);
+  CHECK(nestedParens(parenx5) == 1);
+  CHECK(nestedParens(unnested) == 0);
+}
